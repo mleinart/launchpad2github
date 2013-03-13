@@ -92,6 +92,7 @@ def main(args):
         bug_task.bug.newMessage(content="Migrated to Github: %s" % issue.html_url)
         bug_task.status = "Won't Fix"
         bug_task.bug.lp_save()
+        bug_task.lp_save()
 
 def format_description(bug):
   output = """#### Imported from %(web_link)s
